@@ -6,10 +6,10 @@ ans= 0
 
 for y in range(1, N - 1):
     for x in range(1, N - 1):
-        cnt = 0 
+        cnt = 0
         for yy in range(3):
             for xx in range(3):
-                if arr[yy][xx] == 1:
+                if arr[y + yy - 1][x + xx - 1] == 1:
                     cnt += 1
 
         if cnt > ans:
