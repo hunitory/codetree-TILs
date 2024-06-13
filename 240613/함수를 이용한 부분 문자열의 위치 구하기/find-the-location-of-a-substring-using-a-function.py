@@ -5,7 +5,7 @@ def find_target_index(search, target):
     search_len = len(search)
     target_len = len(target)
 
-    for i in range(search_len - target_len):
+    for i in range(search_len - target_len + 1):
         if search[i] == target[0]:
             cnt = 0
             for j in range(target_len):
