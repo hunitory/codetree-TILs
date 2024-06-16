@@ -10,6 +10,8 @@ for i in range(n):
     date, day, weather = input().split()
     datas.append(weather_data(date, day, weather))
 
+datas.sort(key=lambda x:x.date)
+
 
 for data in datas:
     if data.weather == "Rain":
