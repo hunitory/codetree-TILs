@@ -7,5 +7,5 @@ class product:
 product1 = product("codetree", 50)
 print(f'product {product1.productCode} is {product1.productName}')
 productName, productCode = input().split()
-product1 = product(productName, productCode)
-print(f'product {product1.productCode} is {product1.productName}')
+product2 = product(productName, productCode)
+print(f'product {product2.productCode} is {product2.productName}')
