@@ -4,7 +4,7 @@ h, m = 0, 0
 
 h = c - a
 if b <= d:
-    m = b - d
+    m = d - b
 else:
     m = d + 60 - b
     h -= 1
