@@ -1,18 +1,28 @@
+# 클래스 선언
+class Number:
+    def __init__(self, number, index):
+        self.number, self.index = number, index
+
+
+# 변수 선언 및 입력
 n = int(input())
+numbers = []
+arr = list(map(int, input().split()))
+numbers = [
+    Number(num, i)
+    for i, num in enumerate(arr)
+]
+answer = [
+    0 for _ in range(n)
+]
 
-num_list = list(map(int, input().split()))
+# Custom Comparator를 활용한 정렬
+numbers.sort(key=lambda x: (x.number, x.index))
 
-# 3 1 6 2 7 30 1
-# 1 1 2 3 6 7 30
+# 정렬된 숫자들의 원래 인덱스를 활용한 정답 배열 저장
+for i, number in enumerate(numbers):
+    answer[number.index] = i + 1 # 인덱스 보정
 
-num_list2 = num_list.copy()
-num_list2.sort()
-
+# 출력
 for i in range(n):
-    for j in range(n):
-        if num_list[i] == num_list2[j]:
-            num_list[i] = j + 1
-            num_list2[j] = 0
-            break
-
-print(*num_list)
+    print(answer[i], end = ' ')
