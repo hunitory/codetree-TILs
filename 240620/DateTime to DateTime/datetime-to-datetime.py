@@ -13,13 +13,17 @@ else:
 
 if b < 11:
     day -= 1
-    hour = 12 - (11 - b)
+    hour += 12 - (11 - b)
 else:
-    hour = b - 11
+    hour += b - 11
 
-if a == 11:
-    day += 1
+if a > 11:
+    day += a - 11 + 1
+
+print(day, hour, minute)
+
+
+if day > 1:
+    print(day * 1440 + hour * 60 + minute - (11 * 60 + 10 + 50))
 else:
-    day = a - 11
-
-print(day * 1440 + hour * 60 + minute  )
+    print(day * 1440 + hour * 60 + minute)
