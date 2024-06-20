@@ -10,4 +10,4 @@ problem_day = sum(num_of_days[:m2]) + d2
 diff_day = problem_day - standard_day
 
 
-print(f'{days[diff_day // 7]}')
+print(f'{days[diff_day % 7]}')
