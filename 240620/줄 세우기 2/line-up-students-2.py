@@ -16,4 +16,4 @@ for i in range(1, N + 1):
 students.sort(key=lambda x:(x.height, -x.weight))
 
 for student in students:
-    print(student.height, student.height, student.number)
+    print(student.height, student.weight, student.number)
