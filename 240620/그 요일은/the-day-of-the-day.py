@@ -15,7 +15,7 @@ diff_day = problem_day - standard_day
 ans = 0
 ans += diff_day // 7
 
-if target_day_index >= diff_day - (ans * 7):
+if target_day_index <= diff_day - (ans * 7):
     ans += 1
 
 print(ans)
