@@ -3,21 +3,30 @@ n = int(input())
 line = [0] * 2001
 
 start = 1000
-
-for i in range(n):
+for i in range(6):
     a, b = map(str, input().split())
     if b == 'R':
-        for j in range(int(a) + 1):
-            start += j
-            line[start] += 1
+        for j in range(int(a)):
+            if line[start] == 0:
+                line[start] += 1
+                start += 1
+                continue
+            if line[start + 1] > 0:
+                line[start] += 1
+                start += 1
+        
+
     else:
+        start -= int(a) + 1
         for j in range(int(a) + 1):
-            start -= j
-            line[start] += 1
+            if line[start] == 0:
+                line[start] += 1
+                start += 1
+                continue
+            if line[start + 1] > 0:
+                line[start] += 1
+                start += 1
 
-ans = 0
-for li in line:
-    if li > 1:
-        ans += 1 
+count = len(list(filter(lambda x: x > 1, line)))
 
-print(ans)
+print(count)
