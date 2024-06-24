@@ -1,6 +1,6 @@
 n, k = map(int, input().split())
 
-blocks = [0] * n
+blocks = [0] * (n + 1)
 
 for i in range(k):
     a, b = map(int, input().split())
