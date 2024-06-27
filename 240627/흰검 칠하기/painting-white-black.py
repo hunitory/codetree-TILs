@@ -26,8 +26,21 @@ W, B, G = 0, 0, 0
 
 for k in line:
     if len(k) > 0:
+        w, b = 0, 0
         if len(k) > 3:
-            G += 1
+            for l in range(len(k)):
+                if k[l] == "W":
+                    w += 1
+                else:
+                    b += 1
+
+            if w >= 2 and b >= 2:
+                G += 1
+            else:
+                if k[-1] == "W":
+                    W += 1
+                else:
+                    B += 1
         else:
             if k[-1] == "W":
                 W += 1
