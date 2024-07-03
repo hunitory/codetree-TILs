@@ -12,6 +12,8 @@ cnt = 0
 for i in range(n - 1):
     if num_list[i] == num_list[i + 1]:
         cnt += 1
+        if ans < cnt:
+            ans = cnt
     else:
         if ans < cnt:
             ans = cnt
