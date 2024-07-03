@@ -17,4 +17,8 @@ for i in range(n - 1):
             ans = cnt + 1
             cnt = 0
 
+if ans < cnt + 1:
+    ans = cnt + 1
+    cnt = 0
+    
 print(ans)
