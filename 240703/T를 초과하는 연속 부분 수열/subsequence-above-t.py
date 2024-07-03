@@ -9,13 +9,13 @@ for i in range(n):
         if num_list[i] > num_list[i - 1]:
             cnt += 1
         else:
-            cnt = 1
+            cnt = 0
     else:
-        cnt = 1
+        cnt = 0
     
     ans = max(ans, cnt)
 
-if ans == 1:
+if ans == 0 :
     print(0)
 else:
-    print(ans)
+    print(ans + 1)
