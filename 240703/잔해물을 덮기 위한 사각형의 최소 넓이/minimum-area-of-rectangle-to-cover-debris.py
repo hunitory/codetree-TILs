@@ -46,4 +46,8 @@ for i in range(mx1 + offset, mx2 + offset + 1):
     if y > ay:
         ay = y
 
-print((ax - 1) * (ay - 1))
+print(ax, ay)
+if ax == 0 or ay == 0:
+    print(0)
+else:
+    print((ax - 1) * (ay - 1))
