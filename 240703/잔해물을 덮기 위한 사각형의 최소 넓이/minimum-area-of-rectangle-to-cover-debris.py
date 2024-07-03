@@ -1,20 +1,37 @@
-N = 2
 matrix = 2001
+offset = 1000
 
 arr = [[0] * matrix for _ in range(matrix)]
 
-ans = 0
+mx1, my1, mx2, my2 = 0, 0, 0, 0
 
-for i in range(1, N + 1):
+for i in range(1, 3):
     x1, y1, x2, y2 = map(int, input().split())
-    for y in range(y1 + 1000, y2 + 1000 + 1):
-        for x in range(x1 + 1000, x2 + 1000 + 1):
-            if i == 1:
-                ans += 1
-                arr[y][x] += 1
-            else:
-                if arr[y][x] == 1:
-                    ans -= 1
+    if i == 1:
+        mx1, my1, mx2, my2 = x1, y1, x2, y2
 
+    for y in range(y1 + offset, y2 + offset + 1):
+        for x in range(x1 + offset, x2 + offset + 1):
+            arr[y][x] = i
 
-print(ans)
+ax, ay = 0, 0
+
+for i in range(my1 + offset, my2 + offset + 1):
+    x = 0
+    for j in range(mx1 + offset, mx2 + offset + 1):
+        if arr[i][j] == 1:
+            x += 1
+
+    if x > ax:
+        ax = x
+
+for i in range(mx1 + offset, mx2 + offset + 1):
+    y = 0
+    for j in range(my1 + offset, my2 + offset + 1):
+        if arr[j][i] == 1:
+            y += 1
+
+    if y > ay:
+        ay = y
+
+print((ax - 1) * (ay - 1))
