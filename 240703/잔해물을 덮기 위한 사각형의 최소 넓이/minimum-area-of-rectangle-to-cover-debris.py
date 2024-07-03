@@ -32,10 +32,10 @@ for ii in range(my1 + offset, my2 + offset):
     if x > ax:
         ax = x
 
-for iii in range(mx1 + offset, mx2 + offset + 1):
+for iii in range(mx1 + offset, mx2 + offset):
     y = 0
     dy = 0
-    for jjj in range(my1 + offset, my2 + offset + 1):
+    for jjj in range(my1 + offset, my2 + offset):
         if arr[jjj][iii] == 1:
             y += 1
             if dy > 0:
