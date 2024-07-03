@@ -14,10 +14,10 @@ for i in range(1, n):
         cnt += 1
     else:
         if max_cnt < cnt :
-            max_cnt = cnt
+            max_cnt = cnt + 1
         cnt = 0
 
 if max_cnt < cnt :
-    max_cnt = cnt
-    
-print(max_cnt + 1)
+    max_cnt = cnt + 1
+
+print(max_cnt)
