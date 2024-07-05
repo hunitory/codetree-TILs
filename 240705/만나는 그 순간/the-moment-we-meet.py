@@ -34,7 +34,10 @@ for i in range(M):
             B_location -= 1
             B_command.append(B_location)
 
+
 for k in range(1, total_time):
     if A_command[k] == B_command[k]:
         print(k)
         break
+else:
+    print(-1)
