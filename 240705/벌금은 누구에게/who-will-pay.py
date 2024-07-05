@@ -8,3 +8,6 @@ for m in range(M):
     if students[punish] >= K:
         print(punish)
         break
+
+else:
+    print(-1)
