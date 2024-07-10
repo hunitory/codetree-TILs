@@ -11,7 +11,7 @@ direction = 0
 for i in range(2, n * m + 1):
     nx, ny = x + dx[direction], y + dy[direction]
 
-    if not 0 <= nx < m or not 0 <= ny < n and arr[ny][nx] != 0:
+    if not 0 <= nx < m or not 0 <= ny < n or arr[ny][nx] != 0:
         direction = (direction + 1) % 4
     
     x, y = x + dx[direction], y + dy[direction]
