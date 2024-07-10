@@ -1,4 +1,4 @@
-# 남 서 북 동
+# 북 서 남 동
 dx, dy = [0, -1, 0, 1], [-1, 0, 1, 0]
 
 n, t = map(int, input().split())
@@ -6,8 +6,8 @@ n, t = map(int, input().split())
 r, c, d = map(str, input().split())
 
 if d == "L": d = 1
-if d == "U": d = 2
-if d == "D": d = 0
+if d == "U": d = 0
+if d == "D": d = 2
 if d == "R": d = 3
 
 
