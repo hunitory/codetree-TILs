@@ -11,5 +11,5 @@ rl.on("line", (input) => {
     [a, b, c] = input.trim().split(" ").map(Number);
 }).on("close", () => {
     console.log(a + b + c);
-    console.log(Math.floor(a + b + c) / 3);
+    console.log(Math.floor((a + b + c) / 3));
 })
