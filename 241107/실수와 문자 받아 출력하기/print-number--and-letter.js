@@ -12,7 +12,7 @@ rl.on("line", (input) => {
     inputs.push(input);
 }).on("close", ()=>{
     inputs.forEach(input => {
-        if (Number(input)) {
+        if (!isNaN(Number(input))) {
             input = Number(input);
             console.log(input.toFixed(2));
         } else {
