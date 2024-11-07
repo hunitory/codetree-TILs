@@ -10,6 +10,6 @@ let inputs = [];
 rl.on("line", (input) => {
     inputs.push(Number(input.trim()))
 }).on("close", () => {
-    console.log(inputs[0] + inputs[1]);
+    console.log(inputs[0] + 87);
     console.log(inputs[1] % 10);
 });
