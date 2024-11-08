@@ -8,14 +8,11 @@ const rl = readline.createInterface({
 let a, b;
 
 function check_even (num) {
-    if (num % 2 == 0) {
-        return true
-    }
-    return false
+    return num % 2 === 0
 }
 
 rl.on("line" , (input) => {
-    [a, b] = input.trim().split().map(Number)
+    [a, b] = input.trim().split(" ").map(Number)
 }).on("close", () => {
     if (check_even(a)) {
         console.log("even")
