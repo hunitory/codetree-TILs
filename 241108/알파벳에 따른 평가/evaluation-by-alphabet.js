@@ -21,6 +21,6 @@ rl.on("line", (input) => {
     } else if ( s === "D") {
         console.log("Effort");
     } else {
-        console.log("Failuire")
+        console.log("Failure")
     }
 })
