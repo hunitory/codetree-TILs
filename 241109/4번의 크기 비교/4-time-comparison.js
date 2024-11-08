@@ -1,12 +1,20 @@
-const fs = require("fs")
+const readline = require("readline");
 
-const input = fs.readFileSync(0).toString().trim().split("\n");
+const rl = readline.createInterface({
+    input: process.stdin,
+    output : process.stdout
+})
 
-let a = input[0]
+let inputs = []
 
-let [b, c, d, e] = input[1].split(" ").map(Number);
+rl.on("line", (input) => {
+    inputs.push(input.trim())
+}).on("close", () => {
+    let a = parseInt(inputs[0])
+    let [b, c, d, e] = inputs[1].split(" ").map(Number)
 
-console.log(a > b ? 1 : 0);
-console.log(a > c ? 1 : 0);
-console.log(a > d ? 1 : 0);
-console.log(a > e ? 1 : 0);
+    console.log(a > b ? 1 : 0);
+    console.log(a > c ? 1 : 0);
+    console.log(a > d ? 1 : 0);
+    console.log(a > e ? 1 : 0);
+})
