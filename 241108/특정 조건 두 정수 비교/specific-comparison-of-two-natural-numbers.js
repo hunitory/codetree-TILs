@@ -2,14 +2,18 @@ const fs = require("fs");
 
 let [a, b] = fs.readFileSync(0).toString().trim().split(" ").map(Number);
 
+let ansA, ansB;
+
 if (a < b) {
-    console.log(1);
+    ansA = 1;
 } else {
-    console.log(0);
+    ansA = 0;
 }
 
 if (a == b) {
-    console.log(1)
+    ansB = 1;
 } else {
-    console.log(0)
+    ansB = 0;
 }
+
+console.log(ansA, ansB);
