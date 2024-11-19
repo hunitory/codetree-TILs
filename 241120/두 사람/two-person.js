@@ -5,16 +5,18 @@ const rl = readline.createInterface({
     output: process.stdout
 })
 
+let inputs = [];
 let ageA, sexA, ageB, sexB;
 
 rl.on("line", (input) => {
-    [ageA, sexA] = input.trim().split(' ')
-    [ageB, sexB] = input.trim().split(' ')
+    inputs.push(input.trim().split(' '))
+}).on("close", () => {
+    [ageA, sexA] = [inputs[0][0], inputs[0][1]]
+    [ageB, sexB] = [inputs[1][0], inputs[1][1]]
 
-    if ((Number(ageA) >= 19 && sexA == "M") || (Number(ageB) >= 19 && sexB == "M") ) {
+    if ((Number(ageA) >= 19 && sexA == "M") || (Number(ageB) >= 19 && sexB == "M")) {
         console.log(1)
     } else {
         console.log(0)
     }
-    rl.close()
 })
