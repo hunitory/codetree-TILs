@@ -1,9 +1,7 @@
 const readline = require("readline");
+const { stdin : input, stdout : output } = require("process")
 
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-})
+const rl = readline.createInterface({input, output})
 
 let inputs = [];
 let ageA, sexA, ageB, sexB;
