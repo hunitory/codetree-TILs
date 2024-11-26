@@ -7,6 +7,7 @@ for ( let i = 0; i <= inputs.length - 1; i++ ) {
         console.log("Lower")
     } else if (inputs[i] === 25) {
         console.log("Good");
+        break;
     } else {
         console.log("Higher")
     }
