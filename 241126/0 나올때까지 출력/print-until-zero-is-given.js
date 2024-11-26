@@ -5,7 +5,7 @@ const { stdin : input, stdout : output} = require("process");
 const rl = readline.createInterface({ input, output });
 
 let inputs = [];
-let a = 0,
+let a = 0;
 
 rl.on("line", (input) => {
     a = Number(input.trim())
