@@ -5,7 +5,7 @@ const { stdin : input, stdout : output} = require("process");
 const rl = readline.createInterface({ input, output });
 
 let inputs = [];
-let a = 0, cnt = 0;
+let a = 0,
 
 rl.on("line", (input) => {
     a = Number(input.trim())
@@ -13,8 +13,6 @@ rl.on("line", (input) => {
         rl.close();
     }
     inputs.push(input)
-    cnt++;
-
 }).on("close", () => {
 
     for (let i = 0; i < inputs.length; i++ ){
