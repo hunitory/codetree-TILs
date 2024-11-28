@@ -18,8 +18,6 @@ rl.on("line", (input) => {
         console.log("Vacancy")
         rl.close();
     }
-})
-
-rl.on("close", () => {
-    process.exit(0); // 프로세스 종료
+}).on("close", () => {
+    process.exit();
 });
