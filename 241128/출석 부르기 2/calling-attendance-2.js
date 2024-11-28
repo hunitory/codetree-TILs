@@ -19,3 +19,7 @@ rl.on("line", (input) => {
         rl.close();
     }
 })
+
+rl.on("close", () => {
+    process.exit(0); // 프로세스 종료
+});
