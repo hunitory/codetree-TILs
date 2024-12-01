@@ -8,7 +8,7 @@ let ans = 0, cnt = 0;
 
 rl.on("line", (input) => {
     let a = Number(input.trim())
-    if (a >= 30) {
+    if (a >= 30 || a < 20) {
         rl.close();
     }
     ans += a
