@@ -15,4 +15,4 @@ while ( n < 1000) {
     cnt++
 }
 
-console.log(cnt + 1);
+console.log(cnt - 1);
