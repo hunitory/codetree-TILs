@@ -5,7 +5,7 @@ let n = Number(fs.readFileSync(0).toString());
 let cnt = 0;
 
 while ( n < 1000) {
-    if (n % 2 === 1) {
+    if (n % 2 === 0) {
         n *= 3
         n++
     } else {
@@ -15,4 +15,4 @@ while ( n < 1000) {
     cnt++
 }
 
-console.log(cnt - 1);
+console.log(cnt);
