@@ -21,8 +21,8 @@ for ( let i = 1; i < n; i++ ) {
         str += " ";
     }
     
-    for ( let j = n ; j + 2 * i - 1 <= n * 2 ; j++) {
-        str += "*";
+    for (let j = 1; (i * 2) + j < n * 2; j++ ) {
+        str += "*"
     }
     console.log(str);
 }
